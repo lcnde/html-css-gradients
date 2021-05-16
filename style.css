@@ -8,7 +8,7 @@ table { border-collapse: collapse; border-spacing: 0;}
 
 .main-container {
   display: grid;
-  grid-template-rows: minmax(535px, 1fr) 200px 100px;
+  grid-template-rows: minmax(535px, 1180px) 200px 100px;
   grid-template-areas: 
   "la"
   "li"
@@ -41,11 +41,62 @@ table { border-collapse: collapse; border-spacing: 0;}
   /* background-image: linear-gradient(#737373, #5e5e5e 50%, #717171 50%, #8d8d8d);   */
   background-image: linear-gradient(#8d8d8d, #717171 49%, #5e5e5e 51%, #7a7a7a );   
   color: white;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2) inset, 0px -101px 0.8px -100px #414141 inset, 0px 101px 1px -100px #6e6e6e inset;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2) inset, /*this is the inner glow, the one making the angles more white*/
+  ;
   font-family: "Lucida Sans Unicode", Helvetica;
   font-size: 12px;
   line-height: 18px;
   border-radius: 5px;
+  box-shadow: 0px 1px 3px 0px rgb(107, 107, 107);
+}
+.main-container > .landing-container > .navbar > div {
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow:
+    0px -1px 0px #414141, 
+    0px 1px 0px #5f5f5f;
+}
+/*SHADES*/
+.main-container > .landing-container > .navbar > div:last-child {
+  border-radius: 0px 5px 5px 0px;
+  box-shadow: 
+  1px 0px 0px 0px #96969677 inset,/*this is the left bar*/
+  0px -101px 0.8px -100px #4e4e4e inset, /*this is the bottom shade*/
+  0px 101px 2px -100px /*black*/#747474 inset;/*this is the top shade*/
+}
+.main-container > .landing-container > .navbar > div:first-child {
+  border-radius: 5px 0px 0px 5px;
+  box-shadow: 
+    -11px 0px 1px -10px #4e4e4e inset, /*this is the shade that overlaps the right side bar*/
+    -2px 0px 0px 0px #96969677 inset,/*this is the right bar that is overlapped by shade*//*this is the shade that overlaps the right-side bar*/
+    0px -101px 0.8px -100px #4e4e4e inset, /*this is the bottom shade*/
+    0px 101px 2px -100px /*black*/#747474 inset;/*this is the top shade*/
+}
+.main-container > .landing-container > .navbar > div:not(:first-child):not(:last-child) {
+  box-shadow: 
+    -11px 0px 1px -10px #4e4e4e inset,/*this is the shade that overlaps the right-side bar*/
+    1px 0px 0px 0px #96969677 inset,/*this is the left bar*/
+    -2px 0px 0px 0px #96969677 inset,/*this is the right bar that is overlapped by shade*/
+    0px -101px 0.8px -100px #4e4e4e inset, /*this is the bottom shade*/
+    0px 101px 2px -100px /*black*/#747474 inset;/*this is the top shade*/
+}
+/*SHADES*/
+
+.main-container > .landing-container > .navbar > .input {
+  overflow: hidden;
+}
+.main-container > .landing-container > .navbar > .input > input {
+  width: 100%;
+  border-radius: 10px;
+  margin: 0px 15px;
+  border: none;
+  background-color:rgba(255, 255, 255, 0);
+  box-shadow:  
+    0px 3px 0px 0px #414141, 
+    0px -3px 0px 0px #5f5f5f;
 }
 
 .main-container > .background {
