@@ -38,13 +38,14 @@ table { border-collapse: collapse; border-spacing: 0;}
   align-items: center;
   justify-items: center;
   justify-content: center;
-  background-image: linear-gradient(#737373, #5e5e5e 50%, #717171 50%, #8d8d8d); 
-  
- color: white;
- font-family: "Lucida Sans Unicode", Helvetica;
- font-size: 12px;
- line-height: 18px;
- border-radius: 5px;
+  /* background-image: linear-gradient(#737373, #5e5e5e 50%, #717171 50%, #8d8d8d);   */
+  background-image: linear-gradient(#8d8d8d, #717171 49%, #5e5e5e 51%, #7a7a7a );   
+  color: white;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2) inset, 0px -101px 0.8px -100px #414141 inset, 0px 101px 1px -100px #6e6e6e inset;
+  font-family: "Lucida Sans Unicode", Helvetica;
+  font-size: 12px;
+  line-height: 18px;
+  border-radius: 5px;
 }
 
 .main-container > .background {
